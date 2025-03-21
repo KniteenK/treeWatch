@@ -16,5 +16,10 @@ app.use(cors({
 app.use(cookieParser()) ;
 app.use(express.json()) ;
 
+import authRouter from "./routes/auth.route.js";
+app.use("/auth", authRouter);
+
+import postRouter from "./routes/posts.route.js";
+app.use("/posts", postRouter);
 
 export default app;
